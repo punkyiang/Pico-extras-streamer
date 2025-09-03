@@ -7,7 +7,7 @@ project(BasicDemo)
 
 set(SRC_FILES
         cpp/BasicDemo.cpp
-        cpp/TcpClientV2.cpp
+#        cpp/TcpClientV2.cpp
 )
 
 

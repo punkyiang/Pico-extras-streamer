@@ -74,6 +74,8 @@ namespace PVRSampleFW {
                                    non_plugin_extensions_.end());
         enabled_extensions_.insert(enabled_extensions_.end(), std::make_move_iterator(featuredExtensions.begin()),
                                    std::make_move_iterator(featuredExtensions.end()));
+        enabled_extensions_.insert(enabled_extensions_.end(), "XR_PICO_eye_tracker");
+        enabled_extensions_.insert(enabled_extensions_.end(), "XR_EXT_eye_gaze_interaction");
         std::transform(enabled_extensions_.begin(), enabled_extensions_.end(), std::back_inserter(allExtensions),
                        [this](const std::string& ext) {
                            // check if extension is supported

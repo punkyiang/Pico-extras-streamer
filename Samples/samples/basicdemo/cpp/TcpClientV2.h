@@ -13,7 +13,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-
+#include "EyeTrackerHandler.h"
 #ifndef SHARED_H
 #define SHARED_H
 
@@ -22,6 +22,7 @@ struct Message {
     int id;
     uint32_t value;
     char text[32];
+    EtData etData;
 };
 #pragma pack(pop)
 
@@ -54,11 +55,12 @@ public:
         }
     }
 
-    static void SendMessage(uint32_t value) {
+    static void SendMessage(uint32_t value, EtData etData) {
         Message msg{};
 
         msg.id = counter++;
         msg.value = value;
+        msg.etData = etData;
         std::snprintf(msg.text, sizeof(msg.text), "Hello %d", msg.id);
 
         send(sock, &msg, sizeof(msg), 0);
