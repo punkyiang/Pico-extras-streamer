@@ -1,0 +1,1 @@
+g++ -std=c++17 -Wall -o TcpHost.exe osclesstcp.cpp shared.cpp oscserver.cpp -lws2_32
