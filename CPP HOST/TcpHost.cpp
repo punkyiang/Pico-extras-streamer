@@ -132,7 +132,7 @@ private:
             //           << "\n";
 
 
-            std::cout << msg.etData.leftEyeMiddleCanthusUvX << "," << msg.etData.leftEyeMiddleCanthusUvY << "," << msg.etData.leftEyeOpenness << "," << msg.etData.leftEyePupilDilation
+            std::cout << msg.etData.leftEyeMiddleCanthusUvX << "," << msg.etData.leftEyeMiddleCanthusUvY << "," << msg.etData.leftEyeOpenness << "," << msg.etData.leftEyePupilDilation << ","
                       << msg.etData.rightEyeMiddleCanthusUvX << "," << msg.etData.rightEyeMiddleCanthusUvY << "," << msg.etData.rightEyeOpenness << "," << msg.etData.rightEyePupilDilation
                       << "\n";
 
